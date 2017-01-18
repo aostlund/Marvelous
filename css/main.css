@@ -1,3 +1,8 @@
+@font-face {
+  font-family: komika;
+  src: url('Komika_display.ttf') format('truetype');
+}
+
 body {
   background: #222 !important;
   color: #fff !important;
@@ -25,6 +30,7 @@ body {
 }
 
 .card > p {
+  font-family: 'komika';
   display: table;
   padding: 5px;
   position: relative;
