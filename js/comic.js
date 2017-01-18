@@ -36,7 +36,7 @@ const state = new Proxy({}, stateHandler);
 state.characters = state.events = state.creators = [];
 $.get(`https://gateway.marvel.com:443/v1/public/comics/${characterId}?apikey=${apiKey}`, result => {
   data = result.data.results[0];
-  $('h1').text(data.title);
+  $('h1').text(data.title.toUpperCase());
   $('h3').html(data.description);
   $('img').attr('src', `${data.thumbnail.path}.${data.thumbnail.extension}`);
   getInitialData(data);
