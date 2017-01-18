@@ -1,3 +1,16 @@
+body {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+.header {
+  background: url(../img/marvel-logo.svg) no-repeat;
+  width: 100%;
+  background-color: #F0141E;
+  background-size: contain;
+  height: 150px; 
+}
+
 .card {
   background: #eee;
   margin: 5px;
@@ -12,14 +25,14 @@
 }
 
 .card > p {
-    display: table;
-    padding: 5px;
-    position: relative;
-    margin: 5px;
-    margin-top: -23%;
-    border: 2px solid #111;
-    color: #111;
-    background: #bbb; p 
+  display: table;
+  padding: 5px;
+  position: relative;
+  margin: 5px;
+  margin-top: -23%;
+  border: 2px solid #111;
+  color: #111;
+  background: #bbb; p 
 }
 
 .text-card {
