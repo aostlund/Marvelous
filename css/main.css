@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #222 !important;
+  background: #ddd !important;
   color: #fff !important;
 }
 
@@ -39,6 +39,8 @@ body {
 .info > h1 {
   font-family: bebas;
   background: #f0141e;
+  letter-spacing: 0.05em;
+  word-spacing: 0.3em;
   padding: 8px;
   margin: 10px;
 }
@@ -86,7 +88,11 @@ body {
 }
 
 .text-card > p {
-  margin: 10px;
+  font-family: 'komika';
+  padding: 5px;
+  border: 2px solid #111;
+  color: #111;
+  background: #bbb; p 
 }
 
 .card-container {
@@ -99,6 +105,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; 
+}
+
+.content-holder > h2 {
+  font-family: bebas;
+  letter-spacing: -0.05em;
+  background: #f0141e;
+  width: 100%;
+  padding: 10px; 
+  margin: 20px;
 }
 
 #characters, #events, #comics, #creators, #series {
@@ -124,4 +139,9 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.material-icons {
+  float: right;
+  margin-top: 5px;
 }
