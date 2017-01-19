@@ -22,11 +22,16 @@ body {
 }
 
 .info-holder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-holder > img {
+  max-width: 100%;
+  margin: 10px;
 }
 
 .info {
@@ -34,6 +39,7 @@ body {
   flex-grow: 1;
   flex-direction: column;
   flex-basis: 50%;
+  margin: 10px;
 }
 
 .info > h1 {
@@ -42,14 +48,12 @@ body {
   letter-spacing: -0.05em;
   word-spacing: 0.3em;
   padding: 8px;
-  margin: 10px;
 }
 
 .info > h3 {
   border: 4px solid #333;
   background: #ff9;
   font-size: 24px;
-  margin: 10px;
   padding: 5px;
   font-family: komika;
   color: #333;
@@ -113,7 +117,7 @@ body {
   letter-spacing: -0.05em;
   word-spacing: 0.5em;
   width: 100%;
-  margin: 5px 0 -10px 20px;
+  margin: 5px 0 0 10px;
 }
 
 .content-holder > h2 {
@@ -122,7 +126,7 @@ body {
   background: #f0141e;
   width: 100%;
   padding: 10px; 
-  margin: 20px;
+  margin: 10px;
 }
 
 #characters, #events, #comics, #creators, #series {
