@@ -106,6 +106,7 @@ body {
 }
 
 .content-holder {
+  padding-top: 7.16em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; 
@@ -157,4 +158,52 @@ body {
 .material-icons {
   float: right;
   margin-top: 5px;
+}
+
+#navbar {
+  padding: 0;
+  background: #F0141E;
+}
+
+#navbar > ul.nav {
+  float: right;
+  margin-top: 54px;
+  margin-right: 3px;
+}
+
+.nav.navbar-nav > li {
+  font-family: 'komika';
+  border: 1px solid #111;
+  margin: 7px;
+  background: #bbb;
+}
+
+li > a {
+  color: #111 !important;
+  padding: 5px 10px !important;
+}
+
+.navbar.m-nav {
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  border: 0;
+}
+
+.navbar-header.m-header {
+  background: #f0141e;
+}
+
+.navbar-toggle {
+  background: #f0141e !important;
+  border-color: #fff !important;
+}
+
+.icon-bar {
+  background: #fff !important;
+}
+
+#navbar.in > ul.nav {
+  width: 100%;
+  margin: 1px;
 }
