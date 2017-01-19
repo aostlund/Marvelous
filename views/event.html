@@ -15,7 +15,26 @@
         <script src="../js/event.js"></script>
    </head>
    <body>
-     <div class="header"></div>
+    <div class="navbar-wrapper">
+      <nav class="m-nav navbar navbar-default content z-depth-1">
+        <div class="navbar-header m-header">
+            <button type="butVton" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="logo" href="index.html"><img src="../img/marvel-logo.svg" height="100"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse nav-holder">
+            <ul class="nav navbar-nav navbar-center">
+                <li><a href="index.html">Home</a></li>
+                <li id="search"><a href="#">Search</a></li>
+                <li id="about"><a href="">About</a></li>
+            </ul>
+        </div>
+      </nav>
+    </div>
      <div class="spinner"></div>
      <div class="content-holder">
        <div class="info-holder">

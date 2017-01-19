@@ -40,7 +40,7 @@ $.get(`https://gateway.marvel.com:443/v1/public/events/${characterId}?apikey=${a
   data = result.data.results[0];
   $('h1').text(data.title);
   $('h3').html(data.description);
-  $('img').attr('src', `${data.thumbnail.path}.${data.thumbnail.extension}`);
+  $('.info-holder>img').attr('src', `${data.thumbnail.path}.${data.thumbnail.extension}`);
   getInitialData(data);
   $('body').click(event => {
     state.expanded = event.target.id.split('-')[0];
