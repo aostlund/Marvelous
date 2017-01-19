@@ -39,7 +39,7 @@ body {
 .info > h1 {
   font-family: bebas;
   background: #f0141e;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.05em;
   word-spacing: 0.3em;
   padding: 8px;
   margin: 10px;
@@ -105,6 +105,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; 
+}
+
+.content-holder > h1 {
+  font-family: bebas;
+  color: #f0141e;
+  letter-spacing: -0.05em;
+  word-spacing: 0.5em;
+  width: 100%;
+  margin: 5px 0 -10px 20px;
 }
 
 .content-holder > h2 {
