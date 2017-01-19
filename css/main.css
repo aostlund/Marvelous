@@ -184,6 +184,7 @@ li > a {
 }
 
 .navbar.m-nav {
+  z-index: 100;
   margin: 0;
   width: 100%;
   position: fixed;
