@@ -160,6 +160,10 @@ body {
   margin-top: 5px;
 }
 
+.logo {
+  margin-left: 4px;
+}
+
 #navbar {
   padding: 0;
   background: #F0141E;
@@ -198,6 +202,7 @@ li > a {
 .navbar-toggle {
   background: #f0141e !important;
   border-color: #fff !important;
+  margin-right: 10px !important;
 }
 
 .icon-bar {
