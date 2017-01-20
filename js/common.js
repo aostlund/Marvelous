@@ -15,7 +15,7 @@ const getMoreData = () => {
 const buildCard = (obj, linkPage) => {
   const output = $(`<a href="${linkPage}?id=${obj.id}"><div class="card" /></a>`);
   $('.card', output)
-    .append(`<img src="${obj.thumbnail.path}.${obj.thumbnail.extension}">`)
+    .append(`<img src="${obj.thumbnail.path}/portrait_uncanny.${obj.thumbnail.extension}">`)
     .append(`<p>${obj.title || obj.name}</p>`);
   return output;
 };
