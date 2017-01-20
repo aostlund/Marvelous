@@ -42,15 +42,17 @@ body {
   margin: 10px;
 }
 
-.info > h1 {
+.info-holder > .info h1 {
+  color: #fff;
   font-family: bebas;
   background: #f0141e;
   letter-spacing: -0.05em;
   word-spacing: 0.3em;
   padding: 8px;
+  margin: 0;
 }
 
-.info > h3 {
+.info h3 {
   border: 4px solid #333;
   background: #ff9;
   font-size: 24px;
@@ -105,6 +107,13 @@ body {
   justify-content: space-around;
 }
 
+.linkback {
+  height: 20px;
+  position: relative;
+  float: right;
+  margin: -355px 10px 0 0;
+}
+
 .content-holder {
   padding-top: 7.16em;
   display: flex;
@@ -112,7 +121,7 @@ body {
   justify-content: space-around; 
 }
 
-.content-holder > h1 {
+.content-holder h1 {
   font-family: bebas;
   color: #f0141e;
   letter-spacing: -0.05em;

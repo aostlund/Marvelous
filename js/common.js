@@ -16,6 +16,7 @@ const buildCard = (obj, linkPage) => {
   const output = $(`<a href="${linkPage}?id=${obj.id}"><div class="card" /></a>`);
   $('.card', output)
     .append(`<img src="${obj.thumbnail.path}/portrait_uncanny.${obj.thumbnail.extension}">`)
+    .append(`<a href="${obj.urls[0].url}"><img class="linkback" src="../img/marvel-logo.svg"></a>`)
     .append(`<p>${obj.title || obj.name}</p>`);
   return output;
 };
