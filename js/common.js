@@ -63,3 +63,11 @@ const updateHolder = (name, offset) => {
     return buildCard(item, `./${name.slice(0, -1)}.html`);
   }));
 };
+
+const getUrlProperties = url => {
+  obj = {};
+  if(url.split('?')[1]) {
+    url.split('?')[1].split('&').forEach(prop => obj[prop.split('=')[0]] = prop.split('=')[1]);
+  }
+  return obj;
+}
