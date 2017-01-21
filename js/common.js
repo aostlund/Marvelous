@@ -1,5 +1,8 @@
 const apiKey = '7ac875b0eeff11a2e08ae33e7f4e4003';
 let data = {};
+$.get('../views/search.html', search => {
+  $('body').append(search);
+});
 
 const getMoreData = () => {
   const offset = state[state.expanded].length;

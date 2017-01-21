@@ -222,3 +222,39 @@ li > a {
   width: 100%;
   margin: 1px;
 }
+
+.search {
+  position: fixed;
+  top: 200px;
+  left: 3%;
+  right: 3%;
+  background: #f0141e;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.17), 0 4px 6px rgba(0,0,0,0.23);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+span {
+  font-family: 'bebas';
+  font-size: 20px;
+  letter-spacing: -0.07em;
+  margin: 5px;
+}
+
+.close > i {
+  color: #fff;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+form p {
+  font-family: 'bebas';
+  font-size: 12px;
+  margin 5px;
+  letter-spacing: -0.05em;
+  word-spacing: 0.2em;
+}

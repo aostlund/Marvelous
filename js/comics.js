@@ -10,7 +10,7 @@ let comicsArray = [];
 let state = {};
 $.get(`https://gateway.marvel.com:443/v1/public/${searchType}?${searchString}apikey=${apiKey}`, result => {
   state[searchType] = result.data.results;
-  $('.content-holder').append(`<h2>${searchType}</h2>a
+  $('.content-holder').append(`<h2>${searchType}</h2>
      <div class="card-container" id="${searchType}" style="height:auto"></div>`
   );
   updateHolder(searchType, 0);
