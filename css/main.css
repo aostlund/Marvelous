@@ -236,9 +236,9 @@ li > a {
 
 span {
   font-family: 'bebas';
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: -0.07em;
-  margin: 5px;
+  margin: 5px 10px;
 }
 
 .close > i {
@@ -253,8 +253,42 @@ form {
 
 form p {
   font-family: 'bebas';
-  font-size: 12px;
-  margin 5px;
+  font-size: 20px;
   letter-spacing: -0.05em;
   word-spacing: 0.2em;
+  margin: 0;
+}
+
+div > select {
+  width: 280px;
+  height: 30px;
+  border: 2px solid #111;
+  font-family: 'komika';
+  font-size: 15px;
+  color: #111;
+  background: #bbb;
+  margin: 3px 0;
+}
+
+div > input[type=search] {
+  width: 280px;
+  height: 30px;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'komika';
+  font-size: 15px;
+  background: #bbb;
+  margin: 3px 0;
+  padding: 0 10px;
+}
+
+form > input[type=submit] {
+  width: 97%;
+  background: #f12521;
+  border: 0;
+  height: 40px;
+  margin: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  font-family: bebas;
+  font-size: 24px;
 }

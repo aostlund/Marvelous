@@ -1,8 +1,31 @@
 const apiKey = '7ac875b0eeff11a2e08ae33e7f4e4003';
 let data = {};
+let searchBox;
 $.get('../views/search.html', search => {
-  $('body').append(search);
+  searchBox = search;
+  $('#search').click(() => {
+    showSearch();
+  });
 });
+
+const showSearch = () => {
+  $('#navbar').collapse('hide');
+  if ($('.search').length === 0) {
+    $('body').append(searchBox);
+    $('body').append($('<div class="darken"></div>'));
+    $('.darken').on('click', showSearch);
+    $('form').on('submit', marvelSearch);
+    $('#close').on('click', showSearch);
+  } else {
+    $('.darken').remove();
+    $('.search').remove();
+  }
+}
+
+const marvelSearch = event => {
+  event.preventDefault();
+  location.href = `/index.html?${$('form').serialize()}`;
+}
 
 const getMoreData = () => {
   const offset = state[state.expanded].length;
@@ -61,9 +84,9 @@ const expandCollapse = (e, old) => {
 const updateHolder = (name, offset) => {
   $(`#${name}`).append(state[name].slice(offset).map(item => {
     if (item.fullName) {
-      return buildTextCard(item.fullName, item.id, `./${name.slice(0, -1)}.html`);
+      return buildTextCard(item.fullName, item.id, `/views/${name.slice(0, -1)}.html`);
     } 
-    return buildCard(item, `./${name.slice(0, -1)}.html`);
+    return buildCard(item, `/views/${name.slice(0, -1)}.html`);
   }));
 };
 
