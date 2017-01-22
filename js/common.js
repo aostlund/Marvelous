@@ -1,16 +1,35 @@
 const apiKey = '7ac875b0eeff11a2e08ae33e7f4e4003';
 let data = {};
 let searchBox;
+let aboutBox;
 $.get('../views/search.html', search => {
   searchBox = search;
-  $('#search').click(() => {
-    showSearch();
-  });
+  $('#search').click(() => showSearch());  
 });
+$.get('../views/about.html', about => {
+  aboutBox = about;
+  $('#about').click(() => showAbout());
+})
+
+const showAbout = () => {
+  $('#navbar').collapse('hide');
+  if ($('.about').length === 0) {
+    if ($('.search').first()) $('.search').first().remove();
+    $('body').append(aboutBox);
+    $('body').append($('<div class="darken"></div>'));
+    $('.darken').on('click', showSearch);
+    $('form').on('submit', marvelSearch);
+    $('#close').on('click', showSearch);
+  } else {
+    $('.darken').remove();
+    $('.about').remove();
+  }
+}
 
 const showSearch = () => {
   $('#navbar').collapse('hide');
   if ($('.search').length === 0) {
+    if ($('.about').first()) $('.about').first().remove();
     $('body').append(searchBox);
     $('body').append($('<div class="darken"></div>'));
     $('.darken').on('click', showSearch);
