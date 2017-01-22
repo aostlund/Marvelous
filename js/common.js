@@ -17,9 +17,9 @@ const showAbout = () => {
     if ($('.search').first()) $('.search').first().remove();
     $('body').append(aboutBox);
     $('body').append($('<div class="darken"></div>'));
-    $('.darken').on('click', showSearch);
+    $('.darken').on('click', showAbout);
     $('form').on('submit', marvelSearch);
-    $('#close').on('click', showSearch);
+    $('#close').on('click', showAbout);
   } else {
     $('.darken').remove();
     $('.about').remove();
