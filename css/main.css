@@ -232,6 +232,7 @@ li > a {
   box-shadow: 0 2px 6px rgba(0,0,0,0.17), 0 4px 6px rgba(0,0,0,0.23);
   margin: 0 auto;
   max-width: 800px;
+  z-index: 10;
 }
 
 span {
@@ -354,4 +355,13 @@ form > input[type=submit] {
   margin: 10px;
   border: 2px solid #111;
   padding: 2px 10px;
+}
+
+.darken {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
 }
