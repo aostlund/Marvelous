@@ -1,0 +1,44 @@
+= '''MARVEL'''ous! =
+=== &ensp;&ensp; ABOUT THE PROJECT ===
+----
+
+:::: '''WHAT IS IT?'''
+:::::: MARVELous! is a web app to traverse and discover in Marvels comics database (Demo-page)]. It uses [https://developer.marvel.com/ Marvels] open API for comics.
+
+:::: '''WHY IS IT?'''
+:::::: This is the final project in the course "Webapplication Development". That is a part of [https://www.lernia.se/utbildning/distans/data-och-it/javascriptutvecklare-frontend-26659 "JavaScript developer - Frontend" Education by Lernia].
+
+:::: '''PROJECT CRITERIA'''
+:::::* All code written by me
+:::::* Have at least one custom HTML, CSS and Js file
+:::::* Use Bootstrap for at least one part
+:::::* HTML, CSS and Js is working, correctly indented, structured and easy to read and commented where needed
+:::::* Use jquery for at least four ajax calls
+:::::* User can control what data gets fetched
+:::::* Make user aware that data is being fetched
+:::::* Menu that scale according to screen size
+:::::* Design and function should work in harmony
+:::::* Look good on at least two screen sizes (mobile and desktop)
+
+:::: '''WORK PROCESS'''
+:::::: I started with getting the data from the api and ths navigation between categories. The idea is to start with a category and then through selecting an item go deeper into the data page by page.
+
+:::::: Each data item is represented by a card. I choose that design as it's easy to make it work on all screet sizes.
+
+:::::: I used flex-box to align the items as that makes it fit each screen size without a lot of mediaqueries. Bootstrap was used for the menu. 
+
+:::: '''THOUGHTS'''
+:::::: The look and function of the page is pretty close to what i had planned. I think I was successfull in achieving a design that makes it easy to understand how to navigate and use the functions.
+
+:::::: Whats not working to full satisfaction is the infinite scroll as it has some edge cases that's not taken care of. The linkback to marvel (thats required by API guidelines) is not clearly apparent on the cards.
+
+:::::: Also the javascript uses to many globals and is mutating them inside functions.
+
+:::::: There are some things which I like to add or redo if working I continue to work on this. More search options and a nicer design for the info about the choosen item. Also making the layout look more like a comic book.
+----
+=== &ensp;&ensp; CONTACT ===
+----
+:::: '''E-MAIL'''
+:::::: [mailto:andreas.ostlund@spelpunkten.com]
+:::: '''LINKEDIN'''
+:::::: [https://www.linkedin.com/in/andreas-östlund-42945467 My LinkedIn Profile]
