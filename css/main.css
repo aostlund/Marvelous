@@ -130,6 +130,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; 
+  padding-bottom: 30px;
 }
 
 .content-holder h1 {
