@@ -43,8 +43,6 @@ $.get(`https://gateway.marvel.com:443/v1/public/events/${characterId}?apikey=${a
   $('h3').html(data.description);
   $('.info-holder img').attr('src', `${data.thumbnail.path}.${data.thumbnail.extension}`);
   getInitialData(data);
-  $('body').click(event => {
-    state.expanded = event.target.id.split('-')[0];
-  });
+  bindExpandCollapse();
   addInfiniteScroll(getMoreData);
 });

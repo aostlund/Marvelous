@@ -116,3 +116,11 @@ const getUrlProperties = url => {
   }
   return obj;
 }
+
+const bindExpandCollapse = () => {
+  $('body').click(event => {
+    if (event.target.nodeName == 'H2') {
+      state.expanded = event.target.innerText.split(' ')[0].toLowerCase();
+    }
+  });
+}

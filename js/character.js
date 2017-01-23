@@ -39,8 +39,6 @@ $.get(`https://gateway.marvel.com:443/v1/public/characters/${characterId}?apikey
   $('.main-linkback').attr('href', data.urls[0].url);
   $('h1').text(data.name);
   getInitialData(data);
-  $('body').click(event => {
-    state.expanded = event.target.id.split('-')[0];
-  });
+  bindExpandCollapse();
   addInfiniteScroll(getMoreData);
 });
