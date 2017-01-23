@@ -1,22 +1,3 @@
-const stateHandler = {
-  set: (target, property, value) => {
-    switch (property) {
-      case 'expanded':
-        expandCollapse(value, target[property] || 'null');
-        target[property] = value;
-        return true;
-      default:
-        const offset = target[property] ? target[property].length : 1;
-        target[property] = value;
-        if (target[property].length > 0) {
-          updateHolder(property, offset);
-          $('.spinner').remove();
-        }
-        return true;
-    }
-  }
-};
-
 const getInitialData = obj => {  
   $.when(
     $.get(`${obj.comics.collectionURI}?apikey=${apiKey}`),

@@ -11,6 +11,28 @@ $.get('../views/about.html', about => {
   $('#about').click(() => showAbout());
 })
 
+const stateHandler = {
+  set: (target, property, value) => {
+    switch (property) {
+      case 'expanded':
+        expandCollapse(value, target[property] || 'null');
+        target[property] = value;
+        return true;
+      default:
+        const offset = target[property] ? target[property].length : 1;
+        target[property] = value;
+        if (target[property].length > 0) {
+          updateHolder(property, offset);
+          $('.spinner').remove();
+        } else {
+          removeEmpty(property);
+          $('.spinner').remove();
+        }
+        return true;
+    }
+  }
+};
+
 const showAbout = () => {
   $('#navbar').collapse('hide');
   if ($('.about').length === 0) {
@@ -121,6 +143,14 @@ const bindExpandCollapse = () => {
   $('body').click(event => {
     if (event.target.nodeName == 'H2') {
       state.expanded = event.target.innerText.split(' ')[0].toLowerCase();
+    }
+  });
+}
+
+const removeEmpty = (property) => {
+  $('h2').each((_, header) => {
+    if ($(header)[0].innerText.split(' ')[0].toLowerCase() == property) {
+      $(header).hide();
     }
   });
 }

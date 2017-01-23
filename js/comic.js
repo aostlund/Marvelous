@@ -1,23 +1,3 @@
-const stateHandler = {
-  set: (target, property, value) => {
-    console.log(`Updated state.${property} to ${value}`)
-    switch (property) {
-      case 'expanded':
-        expandCollapse(value, target[property] || 'null');
-        target[property] = value;
-        return true;
-      default:
-        const offset = target[property] ? target[property].length : 0;
-        target[property] = value;
-        if (target[property].length > 0) {
-          updateHolder(property, offset);
-          $('.spinner').remove();
-        }
-        return true;
-    }
-  }
-};
-
 const getInitialData = obj => {
   console.log(obj)
   $.when(
