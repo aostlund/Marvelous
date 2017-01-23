@@ -13,6 +13,10 @@ body {
   color: #fff !important;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .header {
   background: url(../img/marvel-logo.svg) no-repeat;
   width: 100%;
