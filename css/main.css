@@ -29,9 +29,8 @@ body {
   align-items: center;
 }
 
-.info-holder > img {
+.info-holder img {
   max-width: 100%;
-  margin: 10px;
 }
 
 .info {
