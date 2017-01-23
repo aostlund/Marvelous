@@ -3,7 +3,7 @@
 ----
 
 :::: '''WHAT IS IT?'''
-:::::: MARVELous! is a web app to traverse and discover in Marvels comics database (Demo-page)]. It uses [https://developer.marvel.com/ Marvels] open API for comics.
+:::::: MARVELous! is a web app to traverse and discover in Marvels comics database [http://marvelous.aostlund.com (Demo-page)]. It uses [https://developer.marvel.com/ Marvels] open API for comics.
 
 :::: '''WHY IS IT?'''
 :::::: This is the final project in the course "Webapplication Development". That is a part of [https://www.lernia.se/utbildning/distans/data-och-it/javascriptutvecklare-frontend-26659 "JavaScript developer - Frontend" Education by Lernia].
