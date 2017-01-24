@@ -43,6 +43,8 @@ a {
   flex-direction: column;
   flex-basis: 50%;
   margin: 10px;
+  font-family: 'komika';
+  color: #111;
 }
 
 .info-holder > .info h1 {

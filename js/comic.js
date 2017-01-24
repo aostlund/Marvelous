@@ -8,12 +8,15 @@ const getInitialData = obj => {
       state.characters = characters[0].data.results;
       state.creators = creators[0].data.results;
       state.expanded = 'characters';
+      if ((state.characters.length + state.creators.length) === 0) {
+        $('<h3 class="info">No data available</h3>').insertBefore($('h2').first());
+      }
     });
 };
 
 const characterId = location.search.split('id=')[1];
 const state = new Proxy({}, stateHandler);
-state.characters = state.events = state.creators = [];
+state.characters = state.creators = [];
 $.get(`https://gateway.marvel.com:443/v1/public/comics/${characterId}?apikey=${apiKey}`, result => {
   data = result.data.results[0];
   $('.main-linkback').attr('href', data.urls[0].url);

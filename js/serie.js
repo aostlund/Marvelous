@@ -11,6 +11,9 @@ const getInitialData = obj => {
       state.characters = characters[0].data.results;
       state.creators = creators[0].data.results;
       state.expanded = 'comics';
+      if ((state.comics.length + state.events.length + state.characters.length + state.creators.length) === 0) {
+        $('<h3 class="info">No data available</h3>').insertBefore($('h2').first());
+      }
     });
 };
 
