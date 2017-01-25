@@ -1,5 +1,6 @@
+/* Js for comic page */
+
 const getInitialData = obj => {
-  console.log(obj)
   $.when(
     $.get(`${obj.characters.collectionURI}?apikey=${apiKey}`),
     $.get(`${obj.creators.collectionURI}?apikey=${apiKey}`)

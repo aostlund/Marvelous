@@ -1,3 +1,5 @@
+/* Main page js */
+
 /*----------------------------------------------
  Load eventual search parameters from the url
  and parse them into parameters fit for the API

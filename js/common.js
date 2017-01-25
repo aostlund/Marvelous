@@ -1,16 +1,28 @@
+/* Common functions and variables */
+
+/*-----------------------------------------
+ Initialize and load search and about HTML
+-----------------------------------------*/
 const apiKey = '7ac875b0eeff11a2e08ae33e7f4e4003';
 let data = {};
 let searchBox;
 let aboutBox;
-$.get('../views/search.html', search => {
-  searchBox = search;
-  $('#search').click(() => showSearch());  
+$(() => {
+  $.get('../views/search.html', search => {
+    searchBox = search;
+    $('#search').click(() => showSearch());  
+  });
+  $.get('../views/about.html', about => {
+    aboutBox = about;
+    $('#about').click(() => showAbout());
+  });
 });
-$.get('../views/about.html', about => {
-  aboutBox = about;
-  $('#about').click(() => showAbout());
-})
 
+/*-------------------------------------------------------------
+ Proxy that handles updates to state.
+ Expands collapse when state.expanded is updated.
+ Update content holder when state is updated with new content.
+ ------------------------------------------------------------*/
 const stateHandler = {
   set: (target, property, value) => {
     switch (property) {
@@ -33,6 +45,9 @@ const stateHandler = {
   }
 };
 
+/*---------------
+ shows About box
+---------------*/
 const showAbout = () => {
   $('#navbar').collapse('hide');
   if ($('.about').length === 0) {
@@ -40,14 +55,16 @@ const showAbout = () => {
     $('body').append(aboutBox);
     $('body').append($('<div class="darken"></div>'));
     $('.darken').on('click', showAbout);
-    $('form').on('submit', marvelSearch);
     $('#close').on('click', showAbout);
   } else {
-    $('.darken').remove();
+    $('.darken').removeh();
     $('.about').remove();
   }
 }
 
+/*----------------
+ shows Search box
+----------------*/
 const showSearch = () => {
   $('#navbar').collapse('hide');
   if ($('.search').length === 0) {
@@ -63,11 +80,17 @@ const showSearch = () => {
   }
 }
 
+/*--------------------------------
+ send search params to index page
+--------------------------------*/
 const marvelSearch = event => {
   event.preventDefault();
   location.href = `/index.html?${$('form').serialize()}`;
 }
 
+/*---------------------------------------------
+ gets more data in the category thats expanded
+---------------------------------------------*/
 const getMoreData = () => {
   const offset = state[state.expanded].length;
   if (offset < data[state.expanded].available) {
@@ -79,6 +102,9 @@ const getMoreData = () => {
   addInfiniteScroll(getMoreData);
 };
 
+/*--------------------------
+ builds cards to hold items
+--------------------------*/
 const buildCard = (obj, linkPage) => {
   const output = $(`<a href="${linkPage}?id=${obj.id}"><div class="card" /></a>`);
   $('.card', output)
@@ -95,6 +121,9 @@ const buildTextCard = (string, id, linkPage) => {
   return output;
 };
 
+/*-------------------------------------------------------
+ adds infinite scroll and runs given function on trigger
+-------------------------------------------------------*/
 const addInfiniteScroll = (fn) => {
   $(window).scroll(() => {
     const above = $(window).scrollTop();
@@ -107,6 +136,9 @@ const addInfiniteScroll = (fn) => {
   });
 };
 
+/*---------------------------------------------------
+ expands e and collapses old unless they're the same
+---------------------------------------------------*/
 const expandCollapse = (e, old) => {
   console.log(e, old)
   if ($(`#${e}`).css('height') === '0px') {
@@ -122,6 +154,9 @@ const expandCollapse = (e, old) => {
   }
 };
 
+/*-----------------------------------------
+ updates content holder with the new data.
+-----------------------------------------*/
 const updateHolder = (name, offset) => {
   $(`#${name}`).append(state[name].slice(offset).map(item => {
     if (item.fullName) {
@@ -131,6 +166,9 @@ const updateHolder = (name, offset) => {
   }));
 };
 
+/*-----------------------
+ get parameters from url
+-----------------------*/
 const getUrlProperties = url => {
   obj = {};
   if(url.split('?')[1]) {
@@ -139,6 +177,9 @@ const getUrlProperties = url => {
   return obj;
 }
 
+/*--------------------------------------
+ binds listener for expand and collapse
+--------------------------------------*/
 const bindExpandCollapse = () => {
   $('body').click(event => {
     if (event.target.nodeName == 'H2') {
@@ -147,6 +188,9 @@ const bindExpandCollapse = () => {
   });
 }
 
+/*--------------------------------------
+ hides categories thad contains no data
+--------------------------------------*/
 const removeEmpty = (property) => {
   $('h2').each((_, header) => {
     if ($(header)[0].innerText.split(' ')[0].toLowerCase() == property) {

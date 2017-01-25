@@ -1,3 +1,5 @@
+/* Js for serie page */
+
 const getInitialData = obj => {  
   $.when(
     $.get(`${obj.comics.collectionURI}?apikey=${apiKey}`),
