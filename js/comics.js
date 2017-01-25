@@ -14,8 +14,6 @@ searchString = searchString ?
  Load data, initialize content holder
  with data and add infinite scroll
 ------------------------------------*/ 
-let comicsData;
-let comicsArray = [];
 let state = {};
 $(() => {
   $.get(`https://gateway.marvel.com:443/v1/public/${searchType}?${searchString}apikey=${apiKey}`, result => {
