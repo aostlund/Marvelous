@@ -1,4 +1,4 @@
-/* Common functions and variables */
+/* Common functions and variables. Author: Andreas Östlund*/
 
 /*-----------------------------------------
  Initialize and load search and about HTML

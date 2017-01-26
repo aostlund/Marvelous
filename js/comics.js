@@ -1,4 +1,4 @@
-/* Main page js */
+/* Main page js. Author: Andreas Östlund  */
 
 /*----------------------------------------------
  Load eventual search parameters from the url

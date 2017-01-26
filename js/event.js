@@ -1,4 +1,4 @@
-/* Js for event page */
+/* Js for event page. Author: Andreas Östlund  */
 
 const getInitialData = obj => {  
   $.when(

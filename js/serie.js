@@ -1,4 +1,4 @@
-/* Js for serie page */
+/* Js for serie page. Author: Andreas Östlund  */
 
 const getInitialData = obj => {  
   $.when(

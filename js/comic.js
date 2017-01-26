@@ -1,4 +1,4 @@
-/* Js for comic page */
+/* Js for comic page. Author: Andreas Östlund  */
 
 const getInitialData = obj => {
   $.when(

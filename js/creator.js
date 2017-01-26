@@ -1,4 +1,4 @@
-/* Js for creator page */
+/* Js for creator page. Author: Andreas Östlund  */
 
 const getInitialData = obj => {  
   $.when(

@@ -1,4 +1,4 @@
-/* Js for character page */
+/* Js for character page. Author: Andreas Östlund */
 
 const getInitialData = obj => {  
   $.when(
