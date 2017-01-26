@@ -57,7 +57,7 @@ const showAbout = () => {
     $('.darken').on('click', showAbout);
     $('#close').on('click', showAbout);
   } else {
-    $('.darken').removeh();
+    $('.darken').remove();
     $('.about').remove();
   }
 }
